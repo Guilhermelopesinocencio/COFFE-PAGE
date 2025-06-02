@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +9,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet">
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"> -->
         <title>Grão Perfeito</title>
     </head>
     <body>
@@ -28,23 +28,33 @@
                 <div class="icons">
                     <img width="30" height="30"
                         src="https://img.icons8.com/ios-filled/30/ffffff/search--v1.png"
-                        alt="search--v1" />
-                    <img width="30" height="30"
-                        src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
-                        alt="shopping-cart--v1" />
+                        alt="search--v1">
+                    <div class="cart-icon-container">
+                        <img width="30" height="30"
+                            src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
+                            alt="shopping-cart--v1">
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="user">
+                        <img width="30" height="30"
+                            src="https://img.icons8.com/ios-filled/30/ffffff/user.png"
+                            alt="user" />
+                    </div>
                 </div>
             </section>
         </header>
+
         <div class="home-container">
             <section id="home">
                 <div class="content">
                     <h3>O MELHOR CAFÉ DA REGIÃO</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sed perspiciatis architecto temporibus reiciendis
-                        doloribus dignissimos enim dolor, quasi corporis. Quia
-                        debitis mollitia ea cumque consequuntur pariatur
-                        veritatis blanditiis cupiditate repellendus.</p>
-                    <a href="#" class="btn">Peguem o seu Agora</a>
+                    <p>Descubra no Aroma & Sabor Café uma experiência única de
+                        sabores e aromas. Nossos grãos são selecionados
+                        cuidadosamente e torrados artesanalmente para garantir a
+                        qualidade em cada xícara. Venha desfrutar de um ambiente
+                        acolhedor, onde cada gole é uma celebração do verdadeiro
+                        café.</p>
+                    <a href="#" class="btn">Pegue o seu Agora</a>
                 </div>
             </section>
         </div>
@@ -57,15 +67,22 @@
                 </div>
                 <div class="container-image">
                     <h3>O Que Faz Nosso Café Especial</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Iure quod adipisci pariatur numquam neque cum totam
-                        alias quo doloremque eveniet eligendi in aliquam veniam,
-                        ad consequatur quibusdam rem perferendis est.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Nobis excepturi rem eius esse. Magnam eligendi,
-                        accusantium perferendis dolor eveniet provident odit
-                        aliquid exercitationem recusandae aspernatur quis
-                        cupiditate omnis doloribus corporis.</p>
+                    <p>No Aroma & Sabor Café, acreditamos que um bom café vai
+                        além da bebida — é sobre momentos memoráveis. Nossos
+                        baristas são treinados para extrair o melhor de cada
+                        grão, utilizando técnicas tradicionais e inovações
+                        modernas. Desde a plantação até a sua xícara, cuidamos
+                        de cada detalhe para oferecer uma experiência única e
+                        inesquecível.</p>
+                    <p>Além da qualidade excepcional do produto, oferecemos um
+                        ambiente que celebra a cultura do café. Nossos baristas,
+                        apaixonados e certificados, dominam desde os métodos
+                        clássicos até as técnicas mais inovadoras, garantindo
+                        que cada xícara conte uma história. Seja para um
+                        espresso revigorante pela manhã ou um café coado para
+                        degustação no fim de tarde, queremos que você se sinta
+                        em casa, envolvido pelo aroma e pela paixão que nos
+                        move.</p>
                     <a href="#" class="btn">Saiba Mais</a>
                 </div>
             </div>
@@ -73,42 +90,52 @@
 
         <section class="menu" id="menu">
             <h2 class="title">Nosso <span>Menu</span></h2>
-
             <div class="box-container">
                 <div class="box">
                     <img src="./img/menu-1.png" alt="item-1">
-                    <h3>Café Coado</h3>
-                    <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                    <h3>Café da Montanha</h3>
+                    <p>Grãos cultivados em alta altitude, com notas cítricas e
+                        corpo encorpado</p>
+                    <div class="price">R$ 13,99 <span>R$ 15,99</span></div>
                     <a href="#" class="btn">Adicione ao Carrinho</a>
                 </div>
                 <div class="box">
                     <img src="./img/menu-2.png" alt="item-2">
-                    <h3>Café Coado</h3>
-                    <div class="price">R$ 13,99 <span>R$ 17,99</span></div>
+                    <h3>Melodia do Cerrado</h3>
+                    <p>Blend exclusivo do Cerrado Mineiro, notas de chocolate e
+                        caramelo</p>
+                    <div class="price">R$ 12,99 <span>R$ 14,99</span></div>
                     <a href="#" class="btn">Adicione ao Carrinho</a>
                 </div>
                 <div class="box">
                     <img src="./img/menu-3.png" alt="item-3">
-                    <h3>Café Coado</h3>
+                    <h3>Ouro Negro</h3>
+                    <p>Intenso e cremoso, perfeito para quem ama um café
+                        robusto</p>
                     <div class="price">R$ 16,99 <span>R$ 19,99</span></div>
                     <a href="#" class="btn">Adicione ao Carrinho</a>
                 </div>
                 <div class="box">
                     <img src="./img/menu-4.png" alt="item-4">
-                    <h3>Café Coado</h3>
-                    <div class="price">R$ 11,99 <span>R$ 15,99</span></div>
+                    <h3>Dulce Aroma</h3>
+                    <p>Suave e levemente adocicado, ideal para acompanhar
+                        doces</p>
+                    <div class="price">R$ 11,99 <span>R$ 13,99</span></div>
                     <a href="#" class="btn">Adicione ao Carrinho</a>
                 </div>
                 <div class="box">
                     <img src="./img/menu-5.png" alt="item-5">
-                    <h3>Café Coado</h3>
-                    <div class="price">R$ 13,99 <span>R$ 16,99</span></div>
+                    <h3>Vento Norte</h3>
+                    <p>Preparado com grãos especiais e servido com gelo
+                        gourmet</p>
+                    <div class="price">R$ 14,99 <span>R$ 16,99</span></div>
                     <a href="#" class="btn">Adicione ao Carrinho</a>
                 </div>
                 <div class="box">
                     <img src="./img/menu-6.png" alt="item-6">
-                    <h3>Café Coado</h3>
-                    <div class="price">R$ 10,99 <span>R$ 14,99</span></div>
+                    <h3>Clássico da Casa</h3>
+                    <p>Nosso blend tradicional, equilibrado e acessível</p>
+                    <div class="price">R$ 10,99</div>
                     <a href="#" class="btn">Adicione ao Carrinho</a>
                 </div>
             </div>
@@ -116,117 +143,205 @@
 
         <section class="review" id="review">
             <h2 class="title">Nossos <span>Clientes</span></h2>
-
             <div class="box-container">
                 <div class="box">
-                    <img src="./img/quote-img.png">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Dolore, nesciunt placeat quas dicta tempore debitis,
-                        officiis ad inventore sit non optio maxime itaque ex
-                        ipsum culpa ullam saepe perferendis voluptates?</p>
+                    <img src="./img/quote-img.png" alt="aspas">
+                    <p>O café mais incrível que já tomei! O ambiente é
+                        aconchegante e o atendimento impecável. Recomendo o
+                        cappuccino com canela!</p>
                     <img src="./img/pic-1.png" alt="foto-cliente" class="user">
                     <h3>Lucas Marques</h3>
                     <div class="stars">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/50/ffffff/star-half-empty.png"
-                            alt="star-half-empty" />
+                            alt="star-half-empty">
                     </div>
                 </div>
                 <div class="box">
-                    <img src="./img/quote-img.png">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Dolore, nesciunt placeat quas dicta tempore debitis,
-                        officiis ad inventore sit non optio maxime itaque ex
-                        ipsum culpa ullam saepe perferendis voluptates?</p>
+                    <img src="./img/quote-img.png" alt="aspas">
+                    <p>Adoro vir aqui aos fins de semana. O latte artístico é
+                        sempre uma surpresa agradável, e os doces combinam
+                        perfeitamente. Nota 10!</p>
                     <img src="./img/pic-3.png" alt="foto-cliente" class="user">
                     <h3>João Gabriel</h3>
                     <div class="stars">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/50/ffffff/star-half-empty.png"
-                            alt="star-half-empty" />
+                            alt="star-half-empty">
                     </div>
                 </div>
                 <div class="box">
-                    <img src="./img/quote-img.png">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Dolore, nesciunt placeat quas dicta tempore debitis,
-                        officiis ad inventore sit non optio maxime itaque ex
-                        ipsum culpa ullam saepe perferendis voluptates?</p>
+                    <img src="./img/quote-img.png" alt="aspas">
+                    <p>A paixão pelo café é visível em cada detalhe. Sou cliente
+                        fiel há anos e nunca me decepcionei. Parabéns à
+                        equipe!</p>
                     <img src="./img/pic-2.png" alt="foto-cliente" class="user">
                     <h3>Hellen Alves</h3>
                     <div class="stars">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
-                            alt="star--v1" />
+                            alt="star--v1">
                         <img width="30" height="30"
                             src="https://img.icons8.com/ios-filled/50/ffffff/star-half-empty.png"
-                            alt="star-half-empty" />
+                            alt="star-half-empty">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="addres" id="addres">
+        <section class="address" id="address">
             <h2 class="title">Nosso <span>Endereço</span></h2>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15285.724257747133!2d-49.27163562276836!3d-16.705330035966995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef13996d1f8e1%3A0xecd9a3049bc01502!2sDuckbill%20-%20Cookies%20e%20Caf%C3%A9s!5e0!3m2!1spt-BR!2sbr!4v1748749283693!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15285.724257747133!2d-49.27163562276836!3d-16.705330035966995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef13996d1f8e1%3A0xecd9a3049bc01502!2sDuckbill%20-%20Cookies%20e%20Caf%C3%A9s!5e0!3m2!1spt-BR!2sbr!4v1748749283693!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
         <section class="footer">
             <div class="share">
-                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="instagram-new"/>
-                <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="facebook-new"/>
-                <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/twitterx--v1.png" alt="twitterx--v1"/>
+                <img width="30" height="30"
+                    src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png"
+                    alt="instagram-new">
+                <img width="30" height="30"
+                    src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"
+                    alt="facebook-new">
+                <img width="30" height="30"
+                    src="https://img.icons8.com/ios-filled/30/ffffff/twitterx--v1.png"
+                    alt="twitterx--v1">
             </div>
         </section>
 
-
         <!-- Modal do Carrinho -->
-    <div class="cart-modal">
-        <div class="cart-content">
-            <span class="close-cart">&times;</span>
-            <h2>Seu Carrinho</h2>
-            <div class="cart-items"></div>
-            <div class="cart-total">
-                <span>Total:</span>
-                <span class="total-amount">R$ 0,00</span>
+        <div class="cart-modal">
+            <div class="cart-content">
+                <span class="close-cart">&times;</span>
+                <h2>Seu Carrinho</h2>
+                <div class="cart-items"></div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">R$ 0,00</span>
+                </div>
+                <button class="btn checkout-btn">Finalizar Compra</button>
             </div>
-            <button class="btn checkout-btn">Finalizar Compra</button>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script> -->
+        <script src="script.js"></script>
+
+
+
+
+                            <!-- Modal de Login -->
+                    <div class="login-modal">
+                        <div class="login-content">
+                            <span class="close-login">&times;</span>
+                            <h2>Login</h2>
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="login-username">Usuário</label>
+                                    <input type="text" id="login-username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login-password">Senha</label>
+                                    <input type="password" id="login-password" required>
+                                </div>
+                                <div class="form-options">
+                                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                                </div>
+                                <button type="submit" class="btn">Entrar</button>
+                                <div class="register-link">
+                                    Não tem uma conta? <a href="#" class="show-register">Cadastre-se</a>
+                                </div>
+                            </form>
+                            <div class="social-login">
+                                <p>Ou entre com:</p>
+                                <div class="social-icons">
+                                <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/google-logo.png" alt="google-logo"/>
+
+                                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="facebook-new"/>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Cadastro -->
+        <div class="register-modal">
+            <div class="register-content">
+                <span class="close-register">&times;</span>
+                <h2>Cadastre-se</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="register-name">Nome</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-username">Usuário</label>
+                        <input type="text" id="register-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Senha</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Confirme a
+                            Senha</label>
+                        <input type="password" id="register-confirm-password"
+                            required>
+                    </div>
+                    <button type="submit" class="btn">Cadastrar</button>
+                    <div class="login-link">
+                        Já tem uma conta? <a href="#" class="show-login">Faça
+                            login</a>
+                    </div>
+                </form>
+                <div class="social-login">
+                    <p>Ou cadastre-se com:</p>
+                    <div class="social-icons">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/google-logo.png" alt="google-logo"/>
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="facebook-new"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </body>
 </html>
