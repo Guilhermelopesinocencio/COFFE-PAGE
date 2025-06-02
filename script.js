@@ -11,6 +11,147 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeCartBtn = document.querySelector('.close-cart');
     const checkoutBtn = document.querySelector('.checkout-btn');
 
+
+    // Elementos do DOM para login/cadastro
+    const userIcon = document.querySelector('.user');
+    const loginModal = document.querySelector('.login-modal');
+    const registerModal = document.querySelector('.register-modal');
+    const closeLoginBtn = document.querySelector('.close-login');
+    const closeRegisterBtn = document.querySelector('.close-register');
+    const showRegisterLink = document.querySelector('.show-register');
+    const showLoginLink = document.querySelector('.show-login');
+
+
+
+
+            // Abrir modal de login ao clicar no ícone de usuário
+        userIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'flex';
+        });
+
+        // Fechar modais
+        closeLoginBtn.addEventListener('click', function() {
+            loginModal.style.display = 'none';
+        });
+
+        closeRegisterBtn.addEventListener('click', function() {
+            registerModal.style.display = 'none';
+        });
+
+        // Alternar entre login e cadastro
+        showRegisterLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'none';
+            registerModal.style.display = 'flex';
+        });
+
+        showLoginLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+        });
+
+        // Fechar modais ao clicar fora
+        window.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (e.target === registerModal) {
+                registerModal.style.display = 'none';
+            }
+        });
+
+        // Validação do formulário de cadastro
+        const registerForm = document.getElementById('registerForm');
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-confirm-password').value;
+            
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+            
+            // Aqui você pode adicionar a lógica para enviar os dados de cadastro
+            alert('Cadastro realizado com sucesso!');
+            registerModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+        });
+
+        // Validação do formulário de login
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('login-username').value;
+
+            // Aqui você pode adicionar a lógica para verificar o login
+            alert('Login realizado com sucesso!');
+            loginModal.style.display = 'none';
+            
+                // Atualizar ícone do usuário para mostrar que está logado
+                userIcon.innerHTML = `
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/4CAF50/user.png" alt="user" />
+                    <span class="username">${username}</span>
+                `;
+
+            // Armazenar o estado de login no localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('username', username);
+
+        });
+
+        // Simulação de login com redes sociais
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const socialNetwork = this.alt.replace('-logo', '').replace('-new', '');
+                alert(`Você escolheu fazer login com ${socialNetwork}`);
+            });
+        });
+
+                
+            // Verificar se o usuário já está logado ao carregar a página
+            function checkLoginStatus() {
+                const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+                const username = localStorage.getItem('username');
+                
+                if (isLoggedIn && username) {
+                    document.querySelector('.user').innerHTML = `
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/4CAF50/user.png" alt="user" />
+                        <span class="username">${username}</span>
+                    `;
+                }
+            }
+
+
+
+            // Adicione este evento após a definição do userIcon
+            userIcon.addEventListener('click', function(e) {
+                const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+                
+                if (isLoggedIn) {
+                    // Se clicar quando já estiver logado, pode fazer logout
+                    if (confirm('Deseja sair da sua conta?')) {
+                        localStorage.removeItem('isLoggedIn');
+                        localStorage.removeItem('username');
+                        userIcon.innerHTML = '<img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/user.png" alt="user" />';
+                    }
+                } else {
+                    // Se não estiver logado, abre o modal de login
+                    e.preventDefault();
+                    loginModal.style.display = 'flex';
+                }
+            });
+
+
+
+
+
+
+
     // Abrir/fechar carrinho
     cartIcon.addEventListener('click', toggleCart);
     closeCartBtn.addEventListener('click', toggleCart);
@@ -164,5 +305,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Atualiza o carrinho ao carregar a página
     updateCart();
+    checkLoginStatus();
 
 });

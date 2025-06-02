@@ -186,6 +186,13 @@ section {
     transition: all 0.3s ease;
 }
 
+/* Aumenta o tamanho do texto da descrição */
+.menu .box-container .box p {
+    font-size: 1.6rem; /* Tamanho padrão era 1.5rem ou menor */
+    line-height: 1.6; /* Melhora a legibilidade */
+    margin-bottom: 1rem; /* Espaçamento extra */
+}
+
 .menu .box-container .box img {
     height: 10rem;
     margin-bottom: 1rem;
@@ -241,6 +248,8 @@ section {
 }
 
 .review .box-container .box .user {
+    display: block; /* Garante que a imagem respeite margens automáticas */
+    margin: 0 auto; /* Centraliza horizontalmente */
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
@@ -714,6 +723,184 @@ input.error {
 .cart-item.added {
     animation: fadeIn 0.5s ease, pulse 0.5s ease 0.5s;
 }
+
+
+
+
+
+/* Estilos para os modais de login e cadastro */
+.login-modal, .register-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-content, .register-content {
+    background-color: var(--bg);
+    padding: 3rem;
+    border-radius: 0.8rem;
+    width: 100%;
+    max-width: 40rem;
+    border: var(--border);
+    position: relative;
+}
+
+.close-login, .close-register {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.login-content h2, .register-content h2 {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    background-color: #13131a;
+    border: var(--border);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password {
+    color: #ccc;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: var(--main-color);
+}
+
+.register-link, .login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+.show-register, .show-login {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.show-register:hover, .show-login:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-login p {
+    color: #ccc;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Validação de formulário */
+.error-message {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+input.error {
+    border-color: #ff6b6b;
+}
+
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.username {
+    font-size: 1.6rem;
+    color: #fff;
+    display: none; /* Inicialmente oculto */
+}
+
+.user:hover .username {
+    color: var(--main-color);
+}
+
+
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-text {
+    position: absolute;
+    top: 60%; /* Posiciona no meio vertical */
+    left: 45%; /* Posiciona no meio horizontal */
+    transform: translate(-50%, -50%); /* Ajuste fino para centralização exata */
+    color: white;
+    font-size: 1rem; /* Reduz o tamanho para caber no centro */
+    font-weight: bold;
+    text-align: center; /* Garante que o texto não ultrapasse */
+    width: 80%; /* Limita a largura do texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    white-space: nowrap; /* Evita quebras de linha */
+}
+
+
+
+
 
 
 /* Responsividade */
